@@ -1,0 +1,120 @@
+/* ===========================
+   Global Styles
+   =========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* ===========================
+   Header & Navigation (Flexbox)
+   =========================== */
+.header {
+  background: #0056b3;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; /* Flexbox */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex; /* Flexbox */
+  gap: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Main Content
+   =========================== */
+.main {
+  padding: 20px;
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   Services Section (CSS Grid)
+   =========================== */
+.grid-section h2 {
+  margin-bottom: 15px;
+}
+
+.grid-container {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ===========================
+   Media Queries (Responsiveness)
+   =========================== */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
